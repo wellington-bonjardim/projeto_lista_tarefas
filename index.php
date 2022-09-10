@@ -1,15 +1,40 @@
 <!doctype html>
 <html lang="pt-br">
   <head>
-    <title>Oficina</title>
+    <title>Lista de Tarefas</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- FONT AWSEOME -->
+    <script src="https://kit.fontawesome.com/438b2365a2.js" crossorigin="anonymous"></script>
+    
   </head>
   <body>
+                      <!--SERVIÇOS REALIZADOS-->
+    <div class="container app">
+      <div class="row">
+        <div class="col-md-12 menu d-flex justify-content-center bg-dark mt-5">
+
+          <ul class="list-group list-group-horizontal">
+            <li class="list-group-item">
+              <a href="#">Nova Tarefa</a>
+            </li>
+            <li class="list-group-item">
+              <a href="">Tarefas Pendentes</a>
+            </li>
+            <li class="list-group-item">
+              <a href="">Todas as Tarefas</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    
       
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

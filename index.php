@@ -9,33 +9,81 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+    <!-- STYLES -->
+    <link rel="stylesheet" href="css/styles.css">
+
     <!-- FONT AWSEOME -->
     <script src="https://kit.fontawesome.com/438b2365a2.js" crossorigin="anonymous"></script>
     
   </head>
   <body>
-                      <!--SERVIÇOS REALIZADOS-->
+    <nav class="navbar navbar-light bg-light">
+      <div class="container">
+        <a href="#" class="navbar-brand">
+          <img src="img/logo.png" width="30" height="30" class="d-inline-block align-top">
+          Lista de Tarefas
+        </a>
+      </div>
+    </nav>
+
     <div class="container app">
       <div class="row">
-        <div class="col-md-12 menu d-flex justify-content-center bg-dark mt-5">
 
-          <ul class="list-group list-group-horizontal">
-            <li class="list-group-item">
-              <a href="#">Nova Tarefa</a>
+        <div class="col-md-3 menu">
+
+          <ul class="list-group">
+            <li class="list-group-item active">
+              <a href="#">Tarefas pendentes</a>
             </li>
             <li class="list-group-item">
-              <a href="">Tarefas Pendentes</a>
+              <a href="#">Nova tarefa</a>
             </li>
             <li class="list-group-item">
-              <a href="">Todas as Tarefas</a>
+              <a href="#">Todas as tarefas</a>
             </li>
           </ul>
+
+        </div>
+
+        <div class="col-md-9">
+          <div class="container pagina">
+            <div class="row">
+              <div class="col">
+                <h4>Tarefas Pendentes</h4>
+                
+                <hr>
+
+                <div class="row mb-3 d-flex align-items-center tarefa">
+                  <div class="col-sm-9">Estudar PHP</div>
+                  <div class="col-sm-3 mt-1 d-flex justify-content-between">
+                    <i class="fas fa-trash-alt fa-lg text-danger"></i>
+										<i class="fas fa-edit fa-lg text-info"></i>
+										<i class="fas fa-check-square fa-lg text-success"></i>
+                  </div>
+                </div>
+
+                <hr>
+
+                <div class="row mb-3 d-flex align-items-center tarefa">
+                  <div class="col-sm-9">Replicar a lista de tarefas</div>
+                  <div class="col-sm-3 mt-1 d-flex justify-content-between">
+                    <i class="fas fa-trash-alt fa-lg text-danger"></i>
+										<i class="fas fa-edit fa-lg text-info"></i>
+										<i class="fas fa-check-square fa-lg text-success"></i>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-    
-      
+
+
+
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

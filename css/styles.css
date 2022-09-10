@@ -1,0 +1,54 @@
+/*--------------- RESET ---------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*--------------- DIV CONTAINER APP ---------------*/
+.app {
+    margin-top: 25px;
+}
+
+    /*--------------- MENU ---------------*/
+.menu {
+    margin-bottom: 25px;
+}
+
+li.list-group-item.active {
+    background-color: #FFF;
+    border-color: #009933;
+    border-left: 10px solid #009933;
+    font-size: 1.1em;
+}
+
+li a {
+    color: #212529;
+    transition: 0.2s;
+}
+
+li a:hover {
+    text-decoration: none;
+    font-size: 1.1em;
+    color: #000;
+}
+
+/*--------------- DIV CONTAINER PAGINA ---------------*/
+.pagina {
+    border: 1px solid #DFDFDF;
+    padding: 25px; /*!important*/
+}
+
+h4 {
+    color: #009933;
+}
+
+    /*--------------- ÍCONES ---------------*/
+.fas {
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.fas:hover {
+    scale: 1.1;
+}

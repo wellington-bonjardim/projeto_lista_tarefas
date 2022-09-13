@@ -1,3 +1,13 @@
+<?php 
+  $acao = 'recuperar';
+  require 'tarefa_controller.php';
+  /* 
+  echo '<pre>';
+  print_r($tarefas);
+  echo '</pre>';
+   */
+?>
+
 <!doctype html>
 <html lang="pt-br">
   <head>
@@ -50,25 +60,18 @@
                 
                 <hr>
 
-                <div class="row mb-3 d-flex align-items-center tarefa">
-                  <div class="col-sm-9">Estudar PHP</div>
-                  <div class="col-sm-3 mt-1 d-flex justify-content-between">
-                    <i class="fas fa-trash-alt fa-lg text-danger"></i>
-					<i class="fas fa-edit fa-lg text-info"></i>
-					<i class="fas fa-check-square fa-lg text-success"></i>
+                <?php foreach($tarefas as $indice => $tarefa) { ?>
+                  <div class="row mb-3 d-flex align-items-center tarefa">
+                    <div class="col-sm-9"> <?= $tarefa -> tarefa ?> (<?= $tarefa -> status ?>) </div>
+                    <div class="col-sm-3 mt-1 d-flex justify-content-between">
+                      <i class="fas fa-trash-alt fa-lg text-danger"></i>
+                      <i class="fas fa-edit fa-lg text-info"></i>
+                      <i class="fas fa-check-square fa-lg text-success"></i>
+                    </div>
                   </div>
-                </div>
+                  <hr>
+                <?php } ?>
 
-                <hr>
-
-                <div class="row mb-3 d-flex align-items-center tarefa">
-                  <div class="col-sm-9">Replicar a lista de tarefas</div>
-                  <div class="col-sm-3 mt-1 d-flex justify-content-between">
-                    <i class="fas fa-trash-alt fa-lg text-danger"></i>
-					<i class="fas fa-edit fa-lg text-info"></i>
-					<i class="fas fa-check-square fa-lg text-success"></i>
-                  </div>
-                </div>
               </div>
             </div>
           </div>

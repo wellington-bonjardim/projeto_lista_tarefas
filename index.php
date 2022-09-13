@@ -1,3 +1,8 @@
+<?php 
+  $acao = 'recuperarTarefasPendentes';
+  require 'tarefa_controller.php';
+?>
+
 <!doctype html>
 <html lang="pt-br">
   <head>
@@ -14,6 +19,53 @@
 
     <!-- FONT AWSEOME -->
     <script src="https://kit.fontawesome.com/438b2365a2.js" crossorigin="anonymous"></script>
+
+    <script>
+      function editar(id, txt_tarefa) {
+        //Criar um form de edição
+        let form = document.createElement('form')
+        form.action = 'index.php?pag=index&acao=atualizar'
+        form.method = 'POST'
+        form.className = 'row'
+
+        //Criar um input
+        let inputTarefa = document.createElement('input')
+        inputTarefa.type = 'text'
+        inputTarefa.name = 'tarefa'
+        inputTarefa.className = 'col-md-9 form-control'
+        inputTarefa.value = txt_tarefa
+
+        //Criar um input hidden para guardar o ID da tarefa editada
+        let inputId = document.createElement('input')
+        inputId.type = 'hidden'
+        inputId.name = 'id'
+        inputId.value = id
+
+        //Criar um botao de envio
+        let button = document.createElement('button')
+        button.type = 'submit'
+        button.className = 'col-md-3 btn btn-info'
+        button.innerHTML = 'Atualizar'
+
+        //Árvore de elementos
+        form.appendChild(inputTarefa)
+        form.appendChild(inputId)
+        form.appendChild(button)
+        
+        let tarefa = document.getElementById('tarefa_'+ id)
+        tarefa.innerHTML = ''
+        tarefa.insertBefore(form, tarefa[0])
+      }
+
+      function remover(id) {
+        location.href = 'index.php?pag=index&acao=remover&id='+id
+      }
+
+      function marcarRealizada(id) {
+        location.href = 'index.php?pag=index&acao=marcarRealizada&id='+id
+      }
+
+    </script>
     
   </head>
   <body>
@@ -50,24 +102,20 @@
                 
                 <hr>
 
-                <div class="row mb-3 d-flex align-items-center tarefa">
-                  <div class="col-sm-9">Estudar PHP</div>
-                  <div class="col-sm-3 mt-1 d-flex justify-content-between">
-                    <i class="fas fa-trash-alt fa-lg text-danger"></i>
-										<i class="fas fa-edit fa-lg text-info"></i>
-										<i class="fas fa-check-square fa-lg text-success"></i>
+                <?php foreach($tarefas as $indice => $tarefa) { ?>
+                  <div class="row mb-3 d-flex align-items-center tarefa">
+                    <div class="col-sm-9" id= 'tarefa_<?= $tarefa -> id ?>'> 
+                      <?= $tarefa -> tarefa ?> 
+                    </div>
+                    <div class="col-sm-3 mt-1 d-flex justify-content-between">
+                      <i class="fas fa-trash-alt fa-lg text-danger" onclick = "remover(<?= $tarefa -> id ?>)"></i>
+                      <i class="fas fa-edit fa-lg text-info" onclick = "editar(<?= $tarefa -> id ?>, '<?= $tarefa->tarefa ?>')"></i>
+                      <i class="fas fa-check-square fa-lg text-success" onclick="marcarRealizada(<?= $tarefa -> id ?>)"></i>
+                    </div>
                   </div>
-                </div>
+                  <hr>
+                <?php } ?>
 
-                <hr>
-
-                <div class="row mb-3 d-flex align-items-center tarefa">
-                  <div class="col-sm-9">Replicar a lista de tarefas</div>
-                  <div class="col-sm-3 mt-1 d-flex justify-content-between">
-                    <i class="fas fa-trash-alt fa-lg text-danger"></i>
-										<i class="fas fa-edit fa-lg text-info"></i>
-										<i class="fas fa-check-square fa-lg text-success"></i>
-                  </div>
                 </div>
               </div>
             </div>

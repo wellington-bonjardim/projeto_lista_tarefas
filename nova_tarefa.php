@@ -52,8 +52,7 @@
                             <form method="POST" action="tarefa_controller.php?acao=inserir">
                                 <div class="form-group">
                                     <label>Descrição da tarefa:</label>
-                                    <input type="text" class="form-control"   name='tarefa'
-                                    placeholder="Exemplo: Ir ao mercado">
+                                    <input type="text" class="form-control" name='tarefa' placeholder="Exemplo: Ir ao mercado">
                                 </div>
                                 <button class="btn btn-success">Cadastrar</button>
                             </form>

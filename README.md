@@ -2,7 +2,7 @@
 
 # Sobre o projeto
 
-Este projeto, proposto pela UDEMY, tem como finalidade estudar e desenvolver situações do dia-a-dia através do PHP e consiste no desenvolvimento de uma lista de tarefas integrada com um banco de dados desenvolvido através da linguagem SQL através do phpMyAdmin.
+Este projeto, proposto pela UDEMY, tem como finalidade estudar e desenvolver situações do dia-a-dia através do PHP e consiste no desenvolvimento de uma lista de tarefas integrada com um banco de dados desenvolvido através da linguagem SQL.
 
 Ao cadastrar uma nova tarefa, o sistema envia esta tarefa às páginas "todas_tarefas.php" e "index.php", correspondentes às abas "Todas as tarefas" e "Tarefas pendentes", respectivamente. Na aba "Todas as tarefas" o usuário tem acesso a todas as suas tarefas registradas e aos seus respectivos status (pendente ou realizado). Na aba "Tarefas pendentes", o usuário tem acesso somente as tarefas pendentes. Em ambas as abas, o usuário é capaz de editar as tarefas, marcar as tarefas como realizadas ou excluir as tarefas.
 
